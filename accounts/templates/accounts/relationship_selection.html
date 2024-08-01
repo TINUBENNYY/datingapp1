@@ -1,0 +1,16 @@
+{% extends 'accounts/base.html' %}
+{% load static %}
+{% block title %}Relationship Selection{% endblock title %}
+{% block content %}
+<div class="selection-container">
+    <div class="selection-content">
+        <h2>Relationship Type</h2>
+        <p>What type of relationship are you looking for?</p>
+        <div class="button-group">
+            <button onclick="redirectToApp('dating')" class="select-btn">Short Term Relationship</button>
+            <button onclick="redirectToApp('matrimony')" class="select-btn">Long Term Relationship</button>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}  

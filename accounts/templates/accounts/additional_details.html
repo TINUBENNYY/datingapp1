@@ -1,0 +1,68 @@
+{% extends 'accounts/base.html' %}
+{% load static %}
+{% block title %}additional details{% endblock title %}    
+{% block content %}
+<div class="form-container">
+    <div class="form-content">
+        <h2>Additional Details</h2>
+        <form action="" method="post">
+            {% csrf_token %}
+            <label for="annual_income">Annual Income</label>
+            <input type="text" id="annual_income" name="annual_income" required>
+
+            <label for="family_type">Family Type</label>
+            <input type="text" id="family_type" name="family_type" required>
+
+            <label for="family_name">Family Name</label>
+            <input type="text" id="family_name" name="family_name" required>
+
+            <label for="father_name">Father's Name</label>
+            <input type="text" id="father_name" name="father_name" required>
+
+            <label for="father_occupation">Father's Occupation</label>
+            <input type="text" id="father_occupation" name="father_occupation" required>
+
+            <label for="mother_name">Mother's Name</label>
+            <input type="text" id="mother_name" name="mother_name" required>
+
+            <label for="mother_occupation">Mother's Occupation</label>
+            <input type="text" id="mother_occupation" name="mother_occupation" required>
+
+            <label for="siblings_number">Number of Siblings</label>
+            <input type="number" id="siblings_number" name="siblings_number" required>
+
+            <label for="siblings_married">Number of Siblings Married <button type="button" class="add-btn">+</button></label>
+            <input type="number" id="siblings_married" name="siblings_married">
+
+            <label for="siblings_details">Siblings Name & Details</label>
+            <input type="text" id="siblings_details" name="siblings_details" required>
+
+            <label for="height">Height</label>
+            <input type="text" id="height" name="height" required>
+
+            <label for="weight">Weight</label>
+            <input type="text" id="weight" name="weight" required>
+
+            <label for="body_type">Body Type</label>
+            <input type="text" id="body_type" name="body_type" required>
+
+            <label for="complexion">Complexion</label>
+            <input type="text" id="complexion" name="complexion" required>
+
+            <label for="disabilities">Disabilities <button type="button" class="add-btn">+</button></label>
+            <input type="text" id="disabilities" name="disabilities">
+
+            <label for="religion">Religion</label>
+            <input type="text" id="religion" name="religion" required>
+
+            <label for="cast_community">Cast/Community</label>
+            <input type="text" id="cast_community" name="cast_community" required>
+
+            <label for="expectations_partner">Expectations from Partner</label>
+            <input type="text" id="expectations_partner" name="expectations_partner" required>
+
+            <button type="submit" class="submit-btn">Next</button>
+        </form>
+    </div>
+</div>
+{% endblock content %}

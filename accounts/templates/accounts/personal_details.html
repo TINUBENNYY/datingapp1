@@ -1,0 +1,44 @@
+{% extends 'accounts/base.html' %}
+{% load static %}
+{% block title %}Personal Details{% endblock title %}    
+{% block content %}
+<div class="form-container">
+    <div class="form-content">
+        <h2>Personal Details</h2>
+        <form action="" method="post">
+            {% csrf_token %}
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="dob">DOB</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="hobbies">Hobbies</label>
+            <input type="text" id="hobbies" name="hobbies" required>
+
+            <label for="interests">Interests</label>
+            <input type="text" id="interests" name="interests" required>
+
+            <label for="smoking">Smoking Habits</label>
+            <select id="smoking" name="smoking" required>
+                <option value="" disabled selected>Select your option</option>
+                <option value="non-smoker">Non-smoker</option>
+                <option value="occasional">Occasionally</option>
+                <option value="regular">Regularly</option>
+                <option value="plan_to_quit">Plan to Quit</option>
+            </select>
+
+            <label for="drinking">Drinking Habits</label>
+            <select id="drinking" name="drinking" required>
+                <option value="" disabled selected>Select your option</option>
+                <option value="non-drinker">Non-drinker</option>
+                <option value="occasional">Occasionally</option>
+                <option value="regular">Regularly</option>
+                <option value="plan_to_quit">Plan to Quit</option>
+            </select>
+
+            <button type="submit" class="submit-btn">Next</button>
+        </form>
+    </div>
+</div>
+{% endblock content %}

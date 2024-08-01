@@ -1,0 +1,27 @@
+{% extends 'accounts/base.html' %}
+{% load static %}
+{% block title %}Login{% endblock title %}    
+{% block content %}
+<div class="background">
+    <!-- Background content if needed -->
+</div>
+<div class="login-container">
+    <div class="login-form">
+        <h2>Login</h2>
+        <form action="" method="post">
+            {% csrf_token %}
+            <label for="email">Email/Mobile</label>
+            <input type="text" id="email" name="email" placeholder="Enter your email or mobile number" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <button type="submit" class="login-btn">Log In</button>
+        </form>
+        <div class="form-links">
+            <a href="#" class="forgot-password">Forgot password?</a>
+            <p>Don’t have an account? <a href="">Sign Up</a></p>
+        </div>
+    </div>
+</div>
+{% endblock content %}
